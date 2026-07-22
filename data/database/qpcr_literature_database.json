@@ -335,5 +335,71 @@
     "quality_grade": "A",
     "full_text_source": "PMC6697560",
     "notes": "CDC InfA 5-plex, GC%≈40"
+  },
+  {
+    "record_id": "QR-P-007",
+    "pmid": 23515874,
+    "pathogen": "Influenza A",
+    "target_gene": "M/HA",
+    "first_author": "Piralla 2013",
+    "year": 2013,
+    "journal": "J Virol Methods",
+    "quality_grade": "B",
+    "notes": "Triplex qPCR. Primer data in full text. Has table."
+  },
+  {
+    "record_id": "QR-F-008",
+    "pmid": 27678028,
+    "pathogen": "Zika virus",
+    "target_gene": "E",
+    "first_author": "Muller 2016",
+    "year": 2016,
+    "journal": "J Transl Med",
+    "quality_grade": "B",
+    "notes": "ZIKV yield assay. Full data pending. GC%≈51."
+  },
+  {
+    "record_id": "QR-H-009",
+    "pmid": 40500737,
+    "pathogen": "HBV",
+    "target_gene": "X/S",
+    "first_author": "HBV_2025",
+    "year": 2025,
+    "journal": "PLoS One",
+    "quality_grade": "B",
+    "notes": "HBV qPCR+LAMP. Full data pending. GC%≈55."
+  },
+  {
+    "record_id": "QR-V-010",
+    "pmid": 23573183,
+    "pathogen": "HIV-1",
+    "target_gene": "LTR/gag",
+    "first_author": "Strain 2013",
+    "year": 2013,
+    "journal": "Retrovirology",
+    "quality_grade": "B",
+    "notes": "ddPCR HIV DNA. Has table. Full data pending. GC%≈45."
+  },
+  {
+    "record_id": "QR-V-011",
+    "pmid": 21044304,
+    "pathogen": "HIV-1",
+    "target_gene": "pol",
+    "first_author": "Jimba 2010",
+    "year": 2010,
+    "journal": "PLoS One",
+    "quality_grade": "B",
+    "notes": "BLV qPCR. Full data pending."
+  },
+  {
+    "record_id": "QR-V-012",
+    "pmid": 25364909,
+    "pathogen": "HIV-1",
+    "target_gene": "LTR",
+    "first_author": "Kiselinova 2014",
+    "year": 2014,
+    "journal": "PLoS One",
+    "quality_grade": "B",
+    "notes": "Total vs integrated HIV DNA qPCR. Full data pending."
   }
 ]

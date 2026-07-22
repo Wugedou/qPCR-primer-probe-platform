@@ -1,0 +1,58 @@
+{
+  "total": 328,
+  "with_primer_seq": 18,
+  "with_std_curve": 129,
+  "with_ct_table": 130,
+  "with_both": 7,
+  "by_pathogen": {
+    "Dengue virus": {
+      "total": 24,
+      "with_primer": 1,
+      "with_curve": 10,
+      "with_both": 1
+    },
+    "E. coli O157": {
+      "total": 32,
+      "with_primer": 1,
+      "with_curve": 7,
+      "with_both": 0
+    },
+    "HBV": {
+      "total": 46,
+      "with_primer": 1,
+      "with_curve": 22,
+      "with_both": 1
+    },
+    "HIV-1": {
+      "total": 35,
+      "with_primer": 4,
+      "with_curve": 17,
+      "with_both": 3
+    },
+    "Influenza A": {
+      "total": 58,
+      "with_primer": 3,
+      "with_curve": 28,
+      "with_both": 1
+    },
+    "M. tuberculosis": {
+      "total": 30,
+      "with_primer": 3,
+      "with_curve": 7,
+      "with_both": 0
+    },
+    "SARS-CoV-2": {
+      "total": 75,
+      "with_primer": 5,
+      "with_curve": 34,
+      "with_both": 1
+    },
+    "ZIKV": {
+      "total": 28,
+      "with_primer": 0,
+      "with_curve": 4,
+      "with_both": 0
+    }
+  },
+  "timestamp": "2026-07-23T00:27:04.861986"
+}
