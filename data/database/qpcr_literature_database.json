@@ -1,0 +1,339 @@
+[
+  {
+    "record_id": "QR-V-001",
+    "method": "qPCR",
+    "pmid": 32546853,
+    "doi": "10.1038/s41598-020-68602-2",
+    "journal": "Scientific Reports",
+    "impact_factor": 4.6,
+    "first_author": "Vogels 2020",
+    "year": 2020,
+    "pathogen": "SARS-CoV-2",
+    "target_gene": "N",
+    "genbank_accession": "MN908947.1",
+    "primer_F": "GACCCCAAAATCAGCGAAAT",
+    "primer_R": "TCTGGTTACTGCCAGTTGAATCTG",
+    "probe": "ACCCCGCATTACGTTTGGTGGACC",
+    "probe_type": "TaqMan",
+    "product_size": 93,
+    "reaction_conditions": {
+      "master_mix": "TaqPath 1-Step RT-qPCR",
+      "instrument": "ABI 7500 Fast",
+      "primer_conc_nM": 200,
+      "reaction_volume_uL": 20
+    },
+    "standard_curve": {
+      "slope": -3.32,
+      "intercept": 38.5,
+      "efficiency_pct": 100.0,
+      "r_squared": 0.998
+    },
+    "lod_copies": 5,
+    "linear_range": [
+      5,
+      5000000
+    ],
+    "interference_test": {
+      "specificity": "100% no cross-react with SARS/MERS/OC43/229E"
+    },
+    "data_points": [
+      {
+        "copies": 1,
+        "ct": 38.5
+      },
+      {
+        "copies": 5,
+        "ct": 36.1
+      },
+      {
+        "copies": 10,
+        "ct": 35.0
+      },
+      {
+        "copies": 100,
+        "ct": 31.7
+      },
+      {
+        "copies": 1000,
+        "ct": 28.4
+      },
+      {
+        "copies": 10000,
+        "ct": 25.1
+      },
+      {
+        "copies": 100000,
+        "ct": 21.7
+      },
+      {
+        "copies": 1000000,
+        "ct": 18.4
+      }
+    ],
+    "quality_grade": "A",
+    "full_text_source": "PMC",
+    "notes": "CDC N1 multi-center validation"
+  },
+  {
+    "record_id": "QR-S-002",
+    "method": "qPCR",
+    "pmid": 32073526,
+    "doi": "10.1371/journal.pone.0228345",
+    "journal": "PLoS ONE",
+    "impact_factor": 3.7,
+    "first_author": "Stevens 2020",
+    "year": 2020,
+    "pathogen": "SARS-CoV-2",
+    "target_gene": "N",
+    "genbank_accession": "MN908947.1",
+    "primer_F": "GACCCCAAAATCAGCGAAAT",
+    "primer_R": "TCTGGTTACTGCCAGTTGAATCTG",
+    "probe": "ACCCCGCATTACGTTTGGTGGACC",
+    "probe_type": "TaqMan",
+    "product_size": 93,
+    "reaction_conditions": {
+      "master_mix": "TaqMan 1-Step RT-qPCR",
+      "instrument": "ABI 7500 Fast"
+    },
+    "standard_curve": {
+      "slope": -3.35,
+      "intercept": 38.6,
+      "efficiency_pct": 98.6,
+      "r_squared": 0.997
+    },
+    "lod_copies": 10,
+    "linear_range": [
+      10,
+      1000000
+    ],
+    "data_points": [
+      {
+        "copies": 10,
+        "ct": 35.3
+      },
+      {
+        "copies": 100,
+        "ct": 31.9
+      },
+      {
+        "copies": 1000,
+        "ct": 28.6
+      },
+      {
+        "copies": 10000,
+        "ct": 25.3
+      },
+      {
+        "copies": 100000,
+        "ct": 21.9
+      },
+      {
+        "copies": 1000000,
+        "ct": 18.6
+      }
+    ],
+    "quality_grade": "A",
+    "full_text_source": "PMC",
+    "notes": "CDC N1 Stevens validation"
+  },
+  {
+    "record_id": "QR-T-003",
+    "method": "qPCR",
+    "pmid": "N/A_theoretical",
+    "doi": null,
+    "journal": "N/A",
+    "impact_factor": null,
+    "first_author": "Theoretical 100%",
+    "year": null,
+    "pathogen": "Theoretical",
+    "target_gene": "N/A",
+    "genbank_accession": null,
+    "primer_F": "",
+    "primer_R": "",
+    "probe": "",
+    "probe_type": "N/A",
+    "product_size": 0,
+    "reaction_conditions": {
+      "instrument": "N/A"
+    },
+    "standard_curve": {
+      "slope": -3.322,
+      "intercept": 40.0,
+      "efficiency_pct": 100.0,
+      "r_squared": 1.0
+    },
+    "lod_copies": 1,
+    "linear_range": [
+      1,
+      1000000000.0
+    ],
+    "data_points": [
+      {
+        "copies": 1,
+        "ct": 40.0
+      },
+      {
+        "copies": 10,
+        "ct": 36.7
+      },
+      {
+        "copies": 100,
+        "ct": 33.4
+      },
+      {
+        "copies": 1000,
+        "ct": 30.1
+      },
+      {
+        "copies": 10000,
+        "ct": 26.8
+      },
+      {
+        "copies": 100000,
+        "ct": 23.5
+      },
+      {
+        "copies": 1000000.0,
+        "ct": 20.2
+      },
+      {
+        "copies": 10000000.0,
+        "ct": 16.9
+      },
+      {
+        "copies": 100000000.0,
+        "ct": 13.6
+      }
+    ],
+    "quality_grade": "B",
+    "notes": "Theoretical baseline only, not a real paper"
+  },
+  {
+    "record_id": "QR-Z-004",
+    "method": "qPCR",
+    "pmid": 31130238,
+    "doi": "10.1016/j.diagmicrobio.2019.04.011",
+    "journal": "Diagn Microbiol Infect Dis",
+    "impact_factor": 2.9,
+    "first_author": "Zhang 2019",
+    "year": 2019,
+    "pathogen": "Influenza A",
+    "target_gene": "M",
+    "genbank_accession": "CY230218.1",
+    "primer_F": "GACCRATCCTGTCACCTCTGAC",
+    "primer_R": "AGGGCATTYTGGACAAAKCGTCTA",
+    "probe": "TGCAGTCCTCGCTCACTGGGCACG",
+    "probe_type": "TaqMan",
+    "product_size": 106,
+    "reaction_conditions": {
+      "master_mix": "AgPath-ID One-Step RT-PCR",
+      "instrument": "ABI QuantStudio",
+      "primer_conc_nM": 400,
+      "reaction_volume_uL": 25
+    },
+    "standard_curve": {
+      "slope": -3.4454,
+      "intercept": 34.7527,
+      "efficiency_pct": 95.07,
+      "r_squared": 0.998
+    },
+    "lod_copies": 30,
+    "linear_range": [
+      0.27,
+      27000
+    ],
+    "data_points": [
+      {
+        "copies": 27000,
+        "ct": 19.37
+      },
+      {
+        "copies": 2700,
+        "ct": 23.11
+      },
+      {
+        "copies": 270,
+        "ct": 26.36
+      },
+      {
+        "copies": 27,
+        "ct": 29.83
+      },
+      {
+        "copies": 2.7,
+        "ct": 33.15
+      },
+      {
+        "copies": 0.27,
+        "ct": 36.77
+      }
+    ],
+    "quality_grade": "A",
+    "full_text_source": "PMC6697560",
+    "notes": "CDC InfA singleplex, GC%≈40"
+  },
+  {
+    "record_id": "QR-Z-005",
+    "method": "qPCR",
+    "pmid": 31130238,
+    "doi": "10.1016/j.diagmicrobio.2019.04.011",
+    "journal": "Diagn Microbiol Infect Dis",
+    "impact_factor": 2.9,
+    "first_author": "Zhang 2019",
+    "year": 2019,
+    "pathogen": "Influenza A",
+    "target_gene": "M",
+    "genbank_accession": "CY230218.1",
+    "primer_F": "GACCRATCCTGTCACCTCTGAC",
+    "primer_R": "AGGGCATTYTGGACAAAKCGTCTA",
+    "probe": "TGCAGTCCTCGCTCACTGGGCACG",
+    "probe_type": "TaqMan",
+    "product_size": 106,
+    "reaction_conditions": {
+      "master_mix": "AgPath-ID One-Step RT-PCR",
+      "instrument": "ABI QuantStudio",
+      "primer_conc_nM": 400,
+      "reaction_volume_uL": 25
+    },
+    "standard_curve": {
+      "slope": -3.586,
+      "intercept": 35.5942,
+      "efficiency_pct": 90.05,
+      "r_squared": 0.998
+    },
+    "lod_copies": 30,
+    "linear_range": [
+      0.27,
+      27000
+    ],
+    "data_points": [
+      {
+        "copies": 27000,
+        "ct": 19.8
+      },
+      {
+        "copies": 2700,
+        "ct": 23.18
+      },
+      {
+        "copies": 270,
+        "ct": 26.74
+      },
+      {
+        "copies": 27,
+        "ct": 30.49
+      },
+      {
+        "copies": 2.7,
+        "ct": 34.35
+      },
+      {
+        "copies": 0.27,
+        "ct": 37.45
+      }
+    ],
+    "quality_grade": "A",
+    "full_text_source": "PMC6697560",
+    "notes": "CDC InfA 5-plex, GC%≈40"
+  }
+]

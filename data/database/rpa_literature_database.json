@@ -1,0 +1,66 @@
+[
+  {
+    "record_id": "RP-W-001",
+    "method": "RPA",
+    "pmid": 36532497,
+    "doi": "10.3390/v15010034",
+    "journal": "Viruses",
+    "impact_factor": 4.7,
+    "first_author": "Wang 2022",
+    "year": 2022,
+    "pathogen": "Murine hepatitis virus (MHV)",
+    "target_gene": "N",
+    "genbank_accession": "AY700211.1",
+    "primer_F": "TGCCTTTCCGGAACTTTGTATGG",
+    "primer_R": "CAGCACCAACACCAATGTCCAT",
+    "probe": "CCTTCCCACCTGCTGAACCTGCTCTTTTCA[THF]TCCTGCTTACCTATTAGC[3'-C3spacer]",
+    "probe_type": "exo",
+    "product_size": 142,
+    "reaction_conditions": {
+      "recombinase_source": "TwistDx",
+      "mg_conc_mM": 14,
+      "temperature_C": 39,
+      "duration_min": 20,
+      "reaction_volume_uL": 50
+    },
+    "standard_curve": {
+      "slope": -1.3,
+      "intercept": 13.4,
+      "efficiency_pct": null,
+      "r_squared": 0.985
+    },
+    "lod_copies": 44.5,
+    "linear_range": [
+      44.5,
+      1000000.0
+    ],
+    "interference_test": {
+      "specificity": "MHV only, no cross-react with SARS-CoV-2/MERS"
+    },
+    "data_points": [
+      {
+        "copies": 1000000.0,
+        "tt": 2.6
+      },
+      {
+        "copies": 100000.0,
+        "tt": 3.8
+      },
+      {
+        "copies": 10000.0,
+        "tt": 5.2
+      },
+      {
+        "copies": 1000.0,
+        "tt": 6.5
+      },
+      {
+        "copies": 100.0,
+        "tt": 8.3
+      }
+    ],
+    "quality_grade": "A",
+    "full_text_source": "PMC",
+    "notes": "MHV RT-RPA, 5 gradients×3 replicates, exo probe"
+  }
+]

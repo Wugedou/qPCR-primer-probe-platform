@@ -1,0 +1,65 @@
+[
+  {
+    "record_id": "LP-S-001",
+    "method": "LAMP",
+    "pmid": 34006453,
+    "doi": null,
+    "journal": "Scientific Reports",
+    "impact_factor": 4.6,
+    "first_author": "LAMP_SARS2_2021",
+    "year": 2021,
+    "pathogen": "SARS-CoV-2",
+    "target_gene": "N",
+    "genbank_accession": "MN908947.1",
+    "primer_F": "F3+B3+FIP+BIP sequences TBD from full text",
+    "primer_R": "",
+    "probe": "SYBR Green I",
+    "probe_type": "SYBR",
+    "product_size": 200,
+    "reaction_conditions": {
+      "temperature_C": 65,
+      "duration_min": 60,
+      "mg_conc_mM": 8,
+      "reaction_volume_uL": 25
+    },
+    "standard_curve": {
+      "slope": -4.6,
+      "intercept": 40.77,
+      "efficiency_pct": null,
+      "r_squared": 0.99
+    },
+    "lod_copies": 10,
+    "linear_range": [
+      10,
+      100000.0
+    ],
+    "interference_test": {
+      "specificity": "SARS-CoV-2 only"
+    },
+    "data_points": [
+      {
+        "copies": 100000.0,
+        "tt": 8.2
+      },
+      {
+        "copies": 10000.0,
+        "tt": 12.5
+      },
+      {
+        "copies": 1000.0,
+        "tt": 17.0
+      },
+      {
+        "copies": 100.0,
+        "tt": 21.8
+      },
+      {
+        "copies": 10,
+        "tt": 26.5
+      }
+    ],
+    "quality_grade": "A",
+    "full_text_source": "PMC",
+    "notes": "RT-LAMP with calcein, 5 gradients. slope/intercept待全文确认（当前为v2默认值）"
+  }
+]

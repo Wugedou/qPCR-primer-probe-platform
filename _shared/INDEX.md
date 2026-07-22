@@ -42,3 +42,7 @@
 
 ## PLAN-002 (2026-07-22)
 - [PLAN-002_验证扩展与模型泛化.md](../PLAN-002_验证扩展与模型泛化.md) — 5缺口验证扩展
+
+| R-0013 | qpcr_literature_database.json | 2026-07-22 | qPCR文献数据库 (5篇种子) |
+| R-0014 | rpa_literature_database.json | 2026-07-22 | RPA文献数据库 (1篇种子) |
+| R-0015 | lamp_literature_database.json | 2026-07-22 | LAMP文献数据库 (1篇种子) |
