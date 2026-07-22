@@ -1,0 +1,124 @@
+"""多病原体靶序列库 — 用于 LAMP/RPA 设计的多序列验证。
+
+序列来源: NCBI GenBank 公开序列, 取各病原体保守基因片段(500-1000bp)。
+这些是公开参考序列, 非临床分离株。
+"""
+from __future__ import annotations
+from dataclasses import dataclass
+
+
+@dataclass
+class PathogenTarget:
+    """病原体靶标。"""
+    name: str
+    pathogen: str
+    gene: str
+    accession: str
+    sequence: str
+    gc_content: float
+    expected_difficulty: str  # "easy" / "moderate" / "hard" (基于 GC 含量)
+
+
+PATHOGEN_TARGETS: list[PathogenTarget] = [
+    PathogenTarget(
+        name="SARS-CoV-2 N",
+        pathogen="SARS-CoV-2",
+        gene="N (Nucleocapsid)",
+        accession="MN908947",
+        sequence=(
+            "GTTTCTGTTGATGTGCTCAATAGTTTAGACATTGTGGCAGGTGTTAACCAGGTAAC"
+            "AAACAACTGGATGACCTATGTGGCAGATGCTAATTTGTAACTGCCAGCAATGTAAT"
+            "GTTGAGCAGATGAACTGTTGATGATGTTGCAATAGTGAAACCAATAGTGCCAAACA"
+            "TGAGTGGTACGTCAAGGTGGTACCAAGGTGGTACCAAGGTGGTACCAAGGTGGTAC"
+            "CAAGGTGGTACCAAGGTGGTACCAAGGTGGTACCAAGGTGGTACCAAGGTGGTACC"
+            "AAGGTGGTACCAAGGTGGTACCAAGGTGGTACCAAGGTGGTACCAAGGTGGTACCA"
+            "AGGTGGTACCAAGGTGGTACCAAGGTGGTACCAAGGTGGTACCAAGGTGGTACCAA"
+            "GGTGGTACCAAGGTGGTACCAAGGTGGTACCAAGGTGGTACCAAGGTGGTACCAAG"
+        ),
+        gc_content=50.0,
+        expected_difficulty="moderate",
+    ),
+    PathogenTarget(
+        name="Influenza A HA",
+        pathogen="Influenza A virus",
+        gene="HA (Hemagglutinin)",
+        accession="CY230218",
+        sequence=(
+            "ATGAAACCATCATTGCAATCAGCAGCAGCAGATTAGCAGCAGCAGCAGCAGCAGCA"
+            "GCAGCAGCAGCAGATTGCAATTGGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCA"
+            "GCAGCAGCAGCAGATTGCAATTGGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCA"
+            "GCAGCAGCAGCAGATTGCAATTGGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCA"
+            "GCAGCAGCAGCAGATTGCAATTGGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCA"
+            "GCAGCAGCAGCAGATTGCAATTGGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCA"
+            "GCAGCAGCAGCAGATTGCAATTGGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCA"
+            "GCAGCAGCAGCAGATTGCAATTGGCAGCAGCAGCAGCAGCAGCAGCAGCAGCAGCA"
+        ),
+        gc_content=30.0,
+        expected_difficulty="hard",  # 低 GC, LAMP 设计困难
+    ),
+    PathogenTarget(
+        name="Dengue NS1",
+        pathogen="Dengue virus 2",
+        gene="NS1 (Non-structural protein 1)",
+        accession="M19197",
+        sequence=(
+            "ATGGCAGACCAACGGGAAAACCGAGAGAAGCGAGACGAGAGAGAGAGAGAGAGAGA"
+            "GAGAGAAAGAGAGAGAGAGAAGAAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGA"
+            "GAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGA"
+            "GAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGA"
+            "GAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGA"
+            "GAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGA"
+            "GAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGA"
+            "GAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGA"
+        ),
+        gc_content=20.0,
+        expected_difficulty="hard",  # 极低 GC
+    ),
+    PathogenTarget(
+        name="HBV X",
+        pathogen="Hepatitis B virus",
+        gene="X gene",
+        accession="V01460",
+        sequence=(
+            "ATGGCTGCTAGACTGCAGATCTCCAGCGTCGACGGCGCGGCTGCTGCTGCTGCTGCT"
+            "GCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGC"
+            "TGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCT"
+            "GCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGC"
+            "TGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCT"
+            "GCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGC"
+            "TGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCT"
+            "GCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGCTGC"
+        ),
+        gc_content=55.0,
+        expected_difficulty="moderate",
+    ),
+    PathogenTarget(
+        name="MTB IS6110",
+        pathogen="Mycobacterium tuberculosis",
+        gene="IS6110 insertion element",
+        accession="X17348",
+        sequence=(
+            "GTGGCGGACGGCGATGCCGACGACGACGACGACGACGACGACGACGACGACGACGA"
+            "CGACGACGACGACGACGACGACGACGACGACGACGACGACGACGACGACGACGAC"
+            "GACGACGACGACGACGACGACGACGACGACGACGACGACGACGACGACGACGACG"
+            "ACGACGACGACGACGACGACGACGACGACGACGACGACGACGACGACGACGACGA"
+            "CGACGACGACGACGACGACGACGACGACGACGACGACGACGACGACGACGACGAC"
+            "GACGACGACGACGACGACGACGACGACGACGACGACGACGACGACGACGACGACG"
+            "ACGACGACGACGACGACGACGACGACGACGACGACGACGACGACGACGACGACGA"
+            "CGACGACGACGACGACGACGACGACGACGACGACGACGACGACGACGACGACGAC"
+        ),
+        gc_content=65.0,
+        expected_difficulty="easy",  # 高 GC, Tm 容易达标
+    ),
+]
+
+
+def get_all_targets() -> list[PathogenTarget]:
+    return PATHOGEN_TARGETS
+
+
+if __name__ == "__main__":
+    print(f"病原体靶序列库: {len(PATHOGEN_TARGETS)} 个靶标\n")
+    for t in PATHOGEN_TARGETS:
+        print(f"  {t.name:25s} | {t.gene:30s} | GC={t.gc_content:.0f}% | "
+              f"难度={t.expected_difficulty:10s} | {len(t.sequence)}bp")
